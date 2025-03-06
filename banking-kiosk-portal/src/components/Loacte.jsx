@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next"; 
 import "../style/LocateUs.css";
 import Header from './Header';
 import Footer from './Footer';
@@ -7,43 +8,54 @@ import "../style/Header.css";
 import "../style/Footer.css";
 
 const branches = [
-  { name: "Global Bank -Branch 1", address: " Andheri-Kurla Road, Andheri East, Mumbai" },
-  { name: "Global Bank -Branch 2", address: " Baner Road, Baner, Pune"  },
-  { name: "Global Bank -Branch 3", address: " Linking Road, Bandra West, Mumbai" }
-];  
+  { 
+    name: "Global Bank - Branch 1", 
+    address: "Andheri-Kurla Road, Andheri East, Mumbai", 
+    mapLink: "https://www.google.com/maps/place/Andheri-Kurla+Road,+Mumbai" 
+  },
+  { 
+    name: "Global Bank - Branch 2", 
+    address: "Baner Road, Baner, Pune", 
+    mapLink: "https://www.google.com/maps/place/Baner+Road,+Pune" 
+  },
+  { 
+    name: "Global Bank - Branch 3", 
+    address: "Linking Road, Bandra West, Mumbai", 
+    mapLink: "https://www.google.com/maps/place/Linking+Road,+Mumbai" 
+  }
+];
 
-const Locateus = () => {
+const LocateUs = () => {
   const navigate = useNavigate();
-
-  const openGoogleMaps = (address) => {
-    const encodedAddress = encodeURIComponent(address);
-    window.open(`https://www.google.com/maps/place/${encodedAddress}`, "_blank");
-  };
+  const { t } = useTranslation(); 
 
   return (
     <div>
       <Header />
       <div className="locate-us-page">
-        <h1>Locate Us</h1>
-        <p>Find our various branch locations, emergency contacts, and follow us on social media for updates.</p>
+        <h1>{t("locateUs.title")}</h1>
+        <p>{t("locateUs.hotline")}: +1 234 567 890</p>
       </div>
       <div className="locate-content">
         <div className="locate-content-in">
-          <h3>Branch Locations:</h3>
+          <h3>{t("locateUs.branchLocations")}</h3>
           <ul>
             {branches.map((branch, index) => (
-              <li key={index} onClick={() => openGoogleMaps(branch.address)} className="branch-item">
-                {branch.name}: {branch.address} (Click to View on Map)
+              <li key={index} className="branch-item">
+                <strong>{branch.name}</strong>: {branch.address} 
+                (<a href={branch.mapLink} target="_blank" rel="noopener noreferrer">{t("locateUs.mapLink")}</a>)
               </li>
             ))}
           </ul>
-          <h3>Emergency Contacts:</h3>
-          <p>For urgent inquiries, call our 24/7 hotline: +1 234 567 890</p>
-          <h3>Follow Us:</h3>
-          <p>
-            <a href="https://facebook.com" target="_blank" rel="noreferrer">Facebook</a> |{' '}
-            <a href="https://twitter.com" target="_blank" rel="noreferrer">Twitter</a> |{' '}
-            <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+          <h3>{t("locateUs.emergencyContacts")}</h3>
+          <p>{t("locateUs.hotline")}: +1 234 567 890</p>
+
+          {/* Updated Follow Us Section */}
+          <h3>{t("locateUs.followUs")}</h3>
+          <p className="social-links">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">{t("locateUs.facebook")}</a> |{" "}
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">{t("locateUs.twitter")}</a> |{" "}
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">{t("locateUs.instagram")}</a>
           </p>
         </div>
       </div>
@@ -52,4 +64,4 @@ const Locateus = () => {
   );
 };
 
-export default Locateus;
+export default LocateUs;

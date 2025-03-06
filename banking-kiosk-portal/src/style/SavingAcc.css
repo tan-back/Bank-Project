@@ -23,7 +23,9 @@
   max-height: 250px;
   padding-right: 10px;
 }
-
+.center-heading {
+  text-align: center;
+}
 /* Button container placed at the bottom */
 .button-container {
   display: flex;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Accordion, Button } from "react-bootstrap";
 import { getFaqCategories, getFAQs } from "../services/faq-service";
-import { BeatLoader } from "react-spinners";
+// import { BeatLoader } from "react-spinners";
 import { useNavigate, useLocation } from "react-router-dom";
 
 
@@ -87,7 +87,7 @@ const FAQAccordion = () => {
                         </Button>
                         {loading ? (
     <div className="spinner-container">
-        <BeatLoader color="#36D7B7" size={50} />
+        {/* <BeatLoader color="#36D7B7" size={50} /> */}
     </div>
 ) : (
     <div className="faq-accordion">

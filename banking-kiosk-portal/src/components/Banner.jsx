@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Button, Image } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import "../style/Banner.css";
-import { ClipLoader, GridLoader, PulseLoader } from "react-spinners";
+// import "../style/Banner.css";
+// import { ClipLoader, GridLoader, PulseLoader } from "react-spinners";
 import { logBannerClick } from "../services/banner-service"; // Import API function
 
 // Import banner images
@@ -45,7 +45,7 @@ const Banner = () => {
       {/* Full-Screen Loader */}
       {loading && (
         <div className="full-screen-loader">
-          <PulseLoader color="#ffffff" size={20} />
+          {/* <PulseLoader color="#ffffff" size={20} /> */}
           <p>Loading, please wait...</p>
         </div>
       )}
