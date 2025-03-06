@@ -1,11 +1,11 @@
-// import React from "react";
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next"; // Import translation hook
 import "../style/custsupport.css";
-import Header from './Header';
-import Footer from './Footer';
-import "../style/Header.css"
-import "../style/Footer.css"
+import Header from "./Header";
+import Footer from "./Footer";
+import "../style/Header.css";
+import "../style/Footer.css";
 import { Link } from "react-router-dom";
 
 import locate from "../assets/locate.png";
@@ -13,13 +13,15 @@ import rules from "../assets/rules.png";
 import updates from "../assets/updates.png";
 
 const cust = [
-  { path: "/locate", img: locate, label: "Locate Us" },
-  { path: "/rules", img: rules, label: "Rules and Regulations" },
-  { path: "/updates", img: updates, label: "Updates" },
+  { path: "/locate", img: locate, labelKey: "locate_us" },
+  { path: "/rules", img: rules, labelKey: "rules_and_regulations" },
+  { path: "/updates", img: updates, labelKey: "updates" },
 ];
 
 const CustomerSupport = () => {
   const navigate = useNavigate();
+  const { t, i18n } = useTranslation(); // Initialize translation
+
   const [visibleIndexes, setVisibleIndexes] = useState([0, 1]); // Show first two tabs initially
 
   useEffect(() => {
@@ -38,6 +40,7 @@ const CustomerSupport = () => {
     <div className="homepage-cust">
       <Header />
 
+
       {/* Main Content */}
       <main className="content-cust">
         <div className="cust">
@@ -48,8 +51,8 @@ const CustomerSupport = () => {
               onClick={() => navigate(tab.path)}
             >
               <Link to={tab.path} className="cust-icon-container">
-                <img src={tab.img} alt={tab.label} />
-                <p>{tab.label}</p>
+                <img src={tab.img} alt={t(tab.labelKey)} />
+                <p>{t(tab.labelKey)}</p>
               </Link>
             </div>
           ))}
@@ -61,4 +64,4 @@ const CustomerSupport = () => {
   );
 };
 
-  export default CustomerSupport;
+export default CustomerSupport;

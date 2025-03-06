@@ -1,4 +1,5 @@
 import React, { useState } from 'react'; 
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import '../style/Goldloan.css';
 import Header from './Header';
@@ -8,6 +9,7 @@ import "../style/Footer.css";
 import TextToSpeech from "../TextToSpeech";
 
 const GoldLoan = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const [textToRead, setTextToRead] = useState("");
   const [showPopup, setShowPopup] = useState(false);
@@ -23,60 +25,73 @@ const GoldLoan = () => {
   return (
     <div className="gold-loan-container">
       <Header />
-      <h2 className="page-title">Gold Loan</h2>
+      <h2 className="page-title">{t("gold_loan_header")}</h2>
       <div className="loan-info-container">
         <div className="loan-box">
-          <h3>How to Access:</h3>
-          <p>
-            Gold loans can be accessed by visiting any Vistara Capital branch offering this service. Some branches offer doorstep gold loan services, and initial applications can be submitted online for faster processing.
-          </p>
+          <h3>{t("gold_loan_access_header")}</h3>
+          <ul>
+            {t("gold_loan_access_steps", { returnObjects: true }).map((step, index) => (
+              <li key={index}>{step}</li>
+            ))}
+          </ul>
           <div className="button-group">
-            <button className="read-aloud-btn" onClick={() => handleReadAloud("Gold loans can be accessed by visiting any Vistara Capital branch offering this service. Some branches offer doorstep gold loan services, and initial applications can be submitted online for faster processing.")}>🔊 Read Aloud</button>
-            <button className="stop-btn" onClick={handleStop}>⏹ Stop</button>
+            <button 
+              className="read-aloud-btn" 
+              onClick={() => handleReadAloud(t("gold_loan_access_steps", { returnObjects: true }).join(". "))}
+            >
+              🔊 {t("read_aloud")}
+            </button>
+            <button className="stop-btn" onClick={handleStop}>⏹ {t("stop")}</button>
           </div>
         </div>
+
         <div className="loan-box">
-          <h3>Procedure:</h3>
-          <p>
-            The applicant needs to bring their gold ornaments to the branch. The gold is evaluated for purity and weight, and based on its value, the loan amount is sanctioned. The process is quick, often taking less than an hour. After verification, the gold is securely stored by the bank until the loan is repaid.
-          </p>
+          <h3>{t("gold_loan_procedure_header")}</h3>
+          <ul>
+            {t("gold_loan_procedure_steps", { returnObjects: true }).map((step, index) => (
+              <li key={index}>{step}</li>
+            ))}
+          </ul>
           <div className="button-group">
-            <button className="read-aloud-btn" onClick={() => handleReadAloud("The applicant needs to bring their gold ornaments to the branch. The gold is evaluated for purity and weight, and based on its value, the loan amount is sanctioned. The process is quick, often taking less than an hour. After verification, the gold is securely stored by the bank until the loan is repaid.")}>🔊 Read Aloud</button>
-            <button className="stop-btn" onClick={handleStop}>⏹ Stop</button>
+            <button 
+              className="read-aloud-btn" 
+              onClick={() => handleReadAloud(t("gold_loan_procedure_steps", { returnObjects: true }).join(". "))}
+            >
+              🔊 {t("read_aloud")}
+            </button>
+            <button className="stop-btn" onClick={handleStop}>⏹ {t("stop")}</button>
           </div>
         </div>
       </div>
       
       <TextToSpeech text={textToRead} stop={handleStop} />
 
-      {/* Button to open the popup */}
       <button className="documents-btn" onClick={() => setShowPopup(true)}>
-        Documents Required
+        {t("documents_required")}
       </button>
       
-      {/* Popup Box */}
       {showPopup && (
         <div className="popup-box show">
           <div className="popup-content">
-            <h3>Required Documents</h3>
-            <ul id="documents-list">
-              <li>Identity Proof (Aadhaar, PAN, Passport)</li>
-              <li>Address Proof (Utility Bill, Driving License)</li>
-              <li>Recent Passport-size Photographs</li>
-              <li>No Income Proof Required as the Loan is Secured by Gold</li>
+            <h3>{t("gold_loan_documents_header")}</h3>
+            <ul>
+              {t("gold_loan_documents", { returnObjects: true }).map((doc, index) => (
+                <li key={index}>{doc}</li>
+              ))}
             </ul>
             <div className="button-group">
-              <button className="read-aloud-btn" onClick={() => {
-                const docText = Array.from(document.querySelectorAll("#documents-list li"))
-                  .map(li => li.textContent)
-                  .join(". ");
-                handleReadAloud(`Required Documents: ${docText}`);
-              }}>
-                🔊 Read Aloud
+              <button 
+                className="read-aloud-btn" 
+                onClick={() => {
+                  const docText = t("gold_loan_documents", { returnObjects: true }).join(". ");
+                  handleReadAloud(`${t("gold_loan_documents_header")}: ${docText}`);
+                }}
+              >
+                🔊 {t("read_aloud")}
               </button>
-              <button className="stop-btn" onClick={handleStop}>⏹ Stop</button>
+              <button className="stop-btn" onClick={handleStop}>⏹ {t("stop")}</button>
             </div>
-            <button className="close-btn" onClick={() => setShowPopup(false)}>Close</button>
+            <button className="close-btn" onClick={() => setShowPopup(false)}>{t("close")}</button>
           </div>
         </div>
       )}
@@ -87,11 +102,3 @@ const GoldLoan = () => {
 };
 
 export default GoldLoan;
-
-
-
-
-
-
-
-

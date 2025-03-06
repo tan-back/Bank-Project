@@ -1,127 +1,83 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-import '../style/Bill.css';
-import Header from './Header';
-import Footer from './Footer';
+import Header from "./Header";
+import Footer from "./Footer";
 import "../style/Header.css";
 import "../style/Footer.css";
-import TextToSpeech from "../TextToSpeech"; 
+import "../style/Bill.css"; // Bill-specific styles
+import TextToSpeech from "../TextToSpeech";
 
 const Bill = () => {
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const [textToRead, setTextToRead] = useState("");
-  const [showPopup, setShowPopup] = useState(false); // State for pop-up
 
   const handleReadAloud = (text) => {
     setTextToRead(text);
+    const utterance = new SpeechSynthesisUtterance(text);
+
+    // Language mapping for speech synthesis
+    const languageMap = {
+      en: "en-US",
+      hi: "hi-IN",
+      mr: "mr-IN",
+    };
+
+    utterance.lang = languageMap[i18n.language] || "en-US";
+    speechSynthesis.speak(utterance);
   };
 
   const handleStop = () => {
-    setTextToRead(""); // This will trigger stop in TextToSpeech component
+    setTextToRead("");
+    speechSynthesis.cancel();
   };
 
-  return (
-    <div className="locker-container">
-      <Header />
-      <h2 className="page-title">Bill Services</h2>
-      <div className="bill-info-container">
-        <div className="bill-box">
-          <h3>Eligibility & Process to Avail Bill Payment Services:</h3>
-          <ul>
-          <li>Customers must have a savings or current account with the bank.</li>
-          <li>Registration may be required for online bill payment via net banking or mobile banking apps.</li>
-	       <li>Customers can link billers to their bank account for easy recurring payments.</li>
-         <li>Payments can be made instantly or scheduled in advance.</li>
-          </ul>
-          <div className="button-group">
-            <button className="read-aloud-btn" onClick={() => handleReadAloud("Eligibility & Process to Avail Bill Payment Services.Customers must have a savings or current account with the bank.Registration may be required for online bill payment via net banking or mobile banking apps.Customers can link billers to their bank account for easy recurring payments.Payments can be made instantly or scheduled in advance..")}>
-              🔊 Read Aloud
-            </button>
-            <button className="stop-btn" onClick={handleStop}>
-              ⏹ Stop
-            </button>
-          </div>
-        </div>
-        <div className="bill-box">
-          <h3>Charges & Fees:</h3>
-          <ul>
-          <li>Free for Many Services: Some banks provide free bill payments for certain categories.</li>
-          <li>Transaction Fees: Some payments (like credit card bills from another bank) may have small charges.</li>
-          <li>Late Payment Penalty: If payments are not made on time, service providers may impose penalties.</li>
-            </ul>
-         
-          <div className="button-group">
-            <button className="read-aloud-btn" onClick={() => handleReadAloud("Charges & Fees.Free for Many Services: Some banks provide free bill payments for certain categories.Transaction Fees: Some payments (like credit card bills from another bank) may have small charges.Late Payment Penalty: If payments are not made on time, service providers may impose penalties.")}>
-              🔊 Read Aloud
-            </button>
-            <button className="stop-btn" onClick={handleStop}>
-              ⏹ Stop
-            </button>
-          </div>
-        </div>
-        <div className="bill-box">
-          <h3>Types of Bill Payment Services:</h3>
-          <ul>
-          <li>Net Banking & Mobile Banking Payments: Customers can log in to their bank’s app/website to pay bills.</li>
-          <li>Bank Branch Payments: Some banks allow cash or cheque payments at the branch.</li>
-	       <li>Auto-Debit Services: Customers can set up standing instructions for automatic deduction from their accounts.</li>
-         <li>BBPS (Bharat Bill Payment System in India): A centralized payment system that allows seamless bill payments via multiple bank channels.</li>
+  const sections = [
+    { title: "bill_eligibility_title", steps: "bill_eligibility_steps" },
+    { title: "bill_charges_title", steps: "bill_charges_steps" },
+    { title: "bill_types_title", steps: "bill_types_steps" },
+  ];
 
-          </ul>
-          <div className="button-group">
-            <button className="read-aloud-btn" onClick={() => handleReadAloud("ypes of Bill Payment Services.Net Banking & Mobile Banking Payments: Customers can log in to their bank’s app/website to pay bills.Bank Branch Payments: Some banks allow cash or cheque payments at the branch.Auto-Debit Services: Customers can set up standing instructions for automatic deduction from their accounts.BBPS (Bharat Bill Payment System in India): A centralized payment system that allows seamless bill payments via multiple bank channels.")}>
-              🔊 Read Aloud
-            </button>
-            <button className="stop-btn" onClick={handleStop}>
-              ⏹ Stop
-            </button>
-          </div>
+  return (
+    <div>
+      <Header />
+      <div className="bill-container">
+        <h2>{t("bill_services_header")}</h2>
+
+        <div className="bill-info-container">
+          {sections.map((section, index) => (
+            <div className="bill-box" key={index}>
+              <div className="bill-content">
+                <h3>{t(section.title)}</h3>
+                <ul>
+                  {t(section.steps, { returnObjects: true }).map((step, i) => (
+                    <li key={i}>{step}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="button-group">
+                <button
+                  className="read-aloud-btn"
+                  onClick={() =>
+                    handleReadAloud(t(section.steps, { returnObjects: true }).join(". "))
+                  }
+                >
+                  🔊 {t("read_aloud")}
+                </button>
+                <button className="stop-btn" onClick={handleStop}>
+                  ⏹ {t("stop")}
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
       <TextToSpeech text={textToRead} stop={handleStop} />
-
-      {/* Button to open the popup
-      <button className="documents-btn" onClick={() => setShowPopup(true)}>
-        Documents Required
-      </button> */}
-
-      {/* Popup Box */}
-      {/* {showPopup && ( */}
-        {/* // <div className="popup-box show">
-          <div className="popup-content">
-            <h3>Required Documents</h3>
-            <ul id="documents-list">
-              <li>Identity Proof (Aadhar, PAN Card)</li>
-              <li>Address Proof (Utility Bill, Passport)</li>
-              <li>Income Proof (Salary Slip, ITR)</li>
-              <li>Bank Statements (Last 6 Months)</li>
-              <li>Property Documents</li>
-            </ul>
-            <div className="button-group">
-              <button
-                className="read-aloud-btn"
-                onClick={() => {
-                  const docText = Array.from(document.querySelectorAll("#documents-list li"))
-                    .map(li => li.textContent)
-                    .join(". ");
-                  handleReadAloud(`Required Documents: ${docText}`);
-                }}
-              >
-                🔊 Read Aloud
-              </button>
-              <button className="stop-btn" onClick={handleStop}>
-                ⏹ Stop
-              </button>
-            </div>
-            <button className="close-btn" onClick={() => setShowPopup(false)}>Close</button>
-          </div> */}
-         {/* </div> */}
-      {/* )} */}
-
       <Footer />
-     </div>
+    </div>
   );
- };  
+};
 
-export default Bill;  
+export default Bill;

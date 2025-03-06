@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import "../style/Bank-services.css";
-
-// import bankLogo from "../assets/bank.png";
-// import searchIcon from "../assets/search.png";
 import Header from "./Header";
 import Footer from "./Footer";
-import "../style/Header.css"
-import "../style/Footer.css"
-// import homeIcon from "../assets/home.png"; 
-// import chatbotIcon from "../assets/chatbot-icon.png"; 
+import "../style/Header.css";
+import "../style/Footer.css";
 
-// // Icons for services
 import tax from "../assets/tax.png";
 import chk from "../assets/checkbook.png";
 import bill from "../assets/bill.png";
@@ -21,18 +16,19 @@ import digi from "../assets/digital.png";
 import insur from "../assets/insurance.png";
 
 const banks = [
-  { path: "/tax", img: tax, label: "Tax Services" },
-  { path: "/chkbook", img: chk, label: "checkBook Services" },
-  { path: "/bill", img: bill, label: "Bill Services" },
-  { path: "/atmser", img: atm , label: "ATM Services" },
-  { path: "/locker", img: locker, label: "Locker Services" },
-  { path: "/digital", img: digi, label: "Digital Services" },
-  { path: "/insurance", img: insur, label: "Insurance Services" },
+  { path: "/tax", img: tax, labelKey: "tax_services" },
+  { path: "/chkbook", img: chk, labelKey: "checkbook_services" },
+  { path: "/bill", img: bill, labelKey: "bill_services" },
+  { path: "/atmser", img: atm, labelKey: "atm_services" },
+  { path: "/locker", img: locker, labelKey: "locker_services" },
+  { path: "/digital", img: digi, labelKey: "digital_services" },
+  { path: "/insurance", img: insur, labelKey: "insurance_services" },
 ];
 
 const BankingServices = () => {
   const navigate = useNavigate();
-  const [visibleIndexes, setVisibleIndexes] = useState([0, 1]); // Show first two tabs initially
+  const { t, i18n } = useTranslation();
+  const [visibleIndexes, setVisibleIndexes] = useState([0, 1]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -41,7 +37,7 @@ const BankingServices = () => {
         let nextSecond = (second + 2) % banks.length;
         return [nextFirst, nextSecond];
       });
-    }, 3000); // Change tabs every 3 seconds
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
@@ -60,8 +56,8 @@ const BankingServices = () => {
               onClick={() => navigate(tab.path)}
             >
               <Link to={tab.path} className="bank-icon-container">
-                <img src={tab.img} alt={tab.label} />
-                <p>{tab.label}</p>
+                <img src={tab.img} alt={t(tab.labelKey)} />
+                <p>{t(tab.labelKey)}</p>
               </Link>
             </div>
           ))}

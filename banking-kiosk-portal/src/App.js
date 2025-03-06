@@ -1,67 +1,54 @@
 import React, { useEffect, useState } from 'react';
 import Home from './components/Home';
-import './App.css'
-import './style/Home.css'
-import './style/Banner.css'
-// import "bootstrap/dist/css/bootstrap.min.css";
-import './style/Accinfo.css'
-import './style/Loans.css'
-import './style/Bank-services.css'
-import './style/Atm.css'
-import './style/Chkbook.css'
-import './style/Locker.css'
-import './style/Digital.css'
-import './style/custsupport.css'
-import './style/LocateUs.css'
-import './style/Rules.css'
-import './style/Updates.css'
-import './style/SavingAcc.css'
-import './style/Recurring.css'
-import './style/Fixed.css'
-import './style/Salary.css'
-import './style/Current.css'
-import './style/Eduloan.css'
-import './style/Homeloan.css'
-import './style/Goldloan.css'
-import './style/Perloan.css'
-import './style/Vehloan.css'
-import './style/Busiloan.css'
-import './style/ChatPopup.css'
-import InactivityHandler from "../src/components/InactivityHandler";
-// import FAQAccordion from '../src/components/Faq'; 
+import './App.css';
 
+// Importing Styles
+import './style/Home.css';
+import './style/Accinfo.css';
+import './style/Loans.css';
+import './style/Bank-services.css';
+import './style/Atm.css';
+import './style/Chkbook.css';
+import './style/Locker.css';
+import './style/Digital.css';
+import './style/custsupport.css';
+import './style/LocateUs.css';
+import './style/Rules.css';
+import './style/Updates.css';
+import './style/SavingAcc.css';
+import './style/Recurring.css';
+import './style/Fixed.css';
+import './style/Salary.css';
+import './style/Current.css';
+import './style/Eduloan.css';
+import './style/Homeloan.css';
+import './style/Goldloan.css';
+import './style/Perloan.css';
+import './style/Vehloan.css';
+import './style/Busiloan.css';
+import './style/ChatPopup.css';
+
+import InactivityHandler from "./components/InactivityHandler"; // ✅ Kept from the second version
 import Login from './components/Login';
-// import FaqAccordion from '../src/components/Faq';
-function App() {
 
-  const [validUser, setValidUser] = useState()
+function App() {
+  const [validUser, setValidUser] = useState(false); // ✅ Fixed to ensure default state
 
   const getValidUser = (user) => {
-    if (user){
-      sessionStorage.setItem("ValidUser", true)
-      setValidUser(true)
-    }
-    else {
-      sessionStorage.setItem("ValidUser", false)
-      setValidUser (false)
-    }
-  }
+    const isValid = Boolean(user);
+    sessionStorage.setItem("ValidUser", isValid);
+    setValidUser(isValid);
+  };
 
-  useEffect(()=> {
-    const isValidUser = sessionStorage.getItem("ValidUser")
-    if (isValidUser){
-      setValidUser(true)
-    }
-    else {
-      setValidUser(false)
-    }
-  },[validUser])
+  useEffect(() => {
+    const isValidUser = sessionStorage.getItem("ValidUser") === "true";
+    setValidUser(isValidUser);
+  }, []); // ✅ Fixed dependency to run only once
 
   return (
     <React.Fragment>
-      {validUser === true && <Home />}
-      {(!validUser || validUser === false) && <Login getValidUser={getValidUser} />}
-      <InactivityHandler timeout={60000} />
+      {validUser ? <Home /> : <Login getValidUser={getValidUser} />}
+      <InactivityHandler timeout={60000} /> {/* ✅ Kept from the second version */}
     </React.Fragment>
   );
 }

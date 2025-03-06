@@ -1,0 +1,610 @@
+{
+    "home": "Home",
+    "account_info": "Account Information",
+     "bank_service": "Banking Services",
+    "loans": "Loans",
+    "customer_support": "Customer Support",
+    "search": "Search",
+    "disclaimer": "Disclaimer",
+    "chat": "Chat",
+    "select_language": "Select Language",
+    "read_aloud": "Read Aloud",
+    "stop": "Stop",
+
+    "saving_account": "Savings Account",
+    "recurring_account": "Recurring Account",
+    "fixed_account": "Fixed Deposit Account",
+    "salary_account": "Salary Account",
+    "current_account": "Current Account",
+    "tax_services": "Tax Services",
+    "checkbook_services": "Checkbook Services",
+    "bill_services": "Bill Services",
+    "atm_services": "ATM Services",
+    "locker_services": "Locker Services",
+    "digital_services": "Digital Services",
+    "insurance_services": "Insurance Services",
+    "home_loan": "Home Loan",
+    "education_loan": "Education Loan",
+    "business_loan": "Business Loan",
+    "personal_loan": "Personal Loan",
+    "gold_loan": "Gold Loan",
+    "vehicle_loan": "Vehicle Loan",
+    "faq_services": "FAQ",
+    "profile_services": "Profile Management",
+    "settings_services": "Settings",
+    "transactions_services": "Transaction History",
+    "feedback_services": "Feedback",
+    "help_services": "Help Desk",
+    "locate_us": "Locate Us",
+    "rules_and_regulations": "Rules and Regulations",
+    "updates": "Updates",
+      
+"saving_account_header": "Saving Account Management",
+    "saving_create_header": "How to Create a Savings Account",
+    "saving_create_steps": [
+      "Step 1: Choose a Bank",
+      "Compare interest rates, fees, and account benefits before selecting a bank.",
+      "Step 2: Gather Required Documents",
+      "Identity Proof (Aadhaar, Passport, Driver’s License, etc.)",
+      "Address Proof (Utility Bill, Rental Agreement, etc.)",
+      "PAN Card",
+      "Passport-size Photos",
+      "Step 3: Fill Out the Application",
+      "Visit the bank branch or apply online by filling out the savings account opening form.",
+      "Step 4: Complete KYC Verification",
+      "Submit your documents for identity verification as per RBI guidelines.",
+      "Step 5: Fund Your Account",
+      "Deposit the required minimum balance to activate your account.",
+      "Your savings account is now open and ready for use!"
+    ],
+    "saving_manage_header": "How to Manage Your Savings Account",
+    "saving_manage_steps": [
+      "Step 1: Regularly Monitor Account Statements and Transactions.",
+      "Step 2: Set Up Auto Transfers for Savings Goals.",
+      "Step 3: Utilize Online Banking and Mobile Apps for Easy Access.",
+      "Step 4: Keep Your Account Secure with Strong Passwords and Alerts.",
+      "Step 5: Maximize Interest by Maintaining the Required Balance.",
+      "Managing your savings account effectively helps secure your financial future!"
+    ],
+    "saving_close_header": "How to Close a Savings Account",
+    "saving_close_steps": [
+      "Step 1: Withdraw or Transfer Funds",
+      "Ensure your balance is cleared before proceeding with the closure request.",
+      "Step 2: Visit the Bank or Submit an Online Request",
+      "Some banks allow online account closure, while others require in-person verification.",
+      "Step 3: Provide Necessary Documents",
+      "Account Closure Form",
+      "Identity Proof",
+      "Unused Checkbooks/Debit Cards (if required)",
+      "Step 4: Confirm Account Closure",
+      "Request a confirmation letter or final account statement for your records.",
+      "Your savings account is now successfully closed!"
+    ],
+
+ "salary_account_header": "Salary Account Management",
+  "salary_create_header": "How to Create a Salary Account",
+  "salary_create_steps": [
+    "Check Eligibility: Your employer must offer salary accounts.",
+    "Collect Documents: Proof of employment, ID, PAN, Address proof.",
+    "Choose Bank: Based on employer tie-ups or personal preference.",
+    "Fill Form: Online, bank branch, or HR department.",
+    "Verify Identity: KYC process, document submission.",
+    "Receive Account Details: Account number, debit card, net banking access."
+  ],
+  "salary_manage_header": "How to Manage Your Salary Account",
+  "salary_manage_steps": [
+    "Salary Deposits: Employer credits salary monthly.",
+    "Withdraw & Transfer: Use debit card, UPI, or net banking.",
+    "Check Transactions: Monitor salary credits, deductions.",
+    "Auto Payments: Setup bill payments, investments.",
+    "Benefits: Zero balance, overdraft, credit card options.",
+    "Security: Enable 2FA, update passwords regularly."
+  ],
+  "salary_close_header": "How to Close a Salary Account",
+  "salary_close_steps": [
+    "Stop Salary Deposits: Inform employer to transfer elsewhere.",
+    "Check Balance: Clear pending transactions, transfer funds.",
+    "Visit Bank or Apply Online: Some banks allow online closure.",
+    "Submit Documents: Identity proof, closure form, return checkbooks.",
+    "Confirm Closure: Get a confirmation letter or final statement."
+  ],
+
+"current_account_header": "Current Account Management",
+  "current_create_header": "How to Open a Current Account",
+  "current_create_steps": [
+    "Choose a Bank & Account Type.",
+    "Check Eligibility.",
+    "Gather Required Documents.",
+    "Apply Online or Offline.",
+    "Complete KYC Verification.",
+    "Receive Account Details."
+  ],
+  "current_manage_header": "How to Manage Your Current Account",
+  "current_manage_steps": [
+    "Deposit & Withdraw Money.",
+    "Monitor Transactions.",
+    "Maintain Minimum Balance.",
+    "Enable Bulk Payments.",
+    "Utilize Overdraft.",
+    "Secure Your Account."
+  ],
+  "current_close_header": "How to Close a Current Account",
+  "current_close_steps": [
+    "Settle all pending transactions.",
+    "Withdraw or transfer remaining funds.",
+    "Apply for account closure.",
+    "Submit required documents.",
+    "Confirm closure."
+  ],
+
+  "fixed_account_header": "Fixed Deposit (FD) Management",
+  "fixed_create_header": "How to Open a Fixed Deposit (FD) Account",
+  "fixed_create_steps": [
+    "Choose a Bank & FD Type",
+    "Check Eligibility",
+    "Gather Required Documents",
+    "Choose FD Amount & Tenure",
+    "Open the FD Account",
+    "Receive FD Account Details"
+  ],
+  "fixed_manage_header": "How to Manage Your Fixed Deposit (FD) Account",
+  "fixed_manage_steps": [
+    "Track FD Interest & Maturity Date",
+    "Choose Interest Payout Option",
+    "Renew or Withdraw at Maturity",
+    "Avail Loan Against FD",
+    "Premature Withdrawal available with penalties"
+  ],
+  "fixed_close_header": "How to Close a Fixed Deposit (FD) Account",
+  "fixed_close_steps": [
+    "Check Maturity Date",
+    "Choose Closure Method",
+    "Withdraw or Reinvest",
+    "Confirm Closure & Get Final Statement"
+  ],
+  
+  
+  
+    "recurring_header": "Recurring Deposit Account",
+    "open_rd_title": "Open a Recurring Deposit Account",
+    "open_rd_steps": [
+      "Choose a bank that offers RD accounts",
+      "Collect required documents such as ID proof, address proof, and passport-sized photo",
+      "Fill the RD application form with correct details",
+      "Decide the monthly deposit amount and tenure",
+      "Submit the form and activate your RD account"
+    ],
+    "manage_rd_title": "Manage Your RD Account",
+    "manage_rd_steps": [
+      "Deposit the fixed amount every month",
+      "Track your RD account growth regularly",
+      "Option to close RD prematurely if needed",
+      "Enable auto-renewal for continuous savings"
+    ],
+    "close_rd_title": "Close Your RD Account",
+    "close_rd_steps": [
+      "Check if your RD has reached maturity",
+      "Withdraw the funds including interest earned",
+      "Complete the process to close your RD account"
+    ],
+    
+  
+    
+    
+  
+      "atm_services_header": "ATM Services",
+      "atm_eligibility_title": "Eligibility & Process to Use ATM Services",
+      "atm_eligibility_steps": [
+        "Customers must have a debit card, ATM card, or credit card issued by their bank.",
+        "The card must be activated and linked to a valid bank account.",
+        "Transactions require a 4-digit or 6-digit PIN for security.",
+        "ATMs may have daily transaction limits set by the bank."
+      ],
+      "atm_charges_title": "Charges & Fees",
+      "atm_charges_steps": [
+        "Free Transactions: Most banks offer a limited number of free ATM transactions per month.",
+        "Extra Transaction Charges: A small fee is charged for exceeding free monthly limits.",
+        "Interbank ATM Charges: Using another bank’s ATM may incur a transaction fee after the free limit.",
+        "International ATM Fees: Foreign ATM withdrawals have higher charges, along with currency conversion fees.",
+        "Card Replacement Fee: If the ATM card is lost or stolen, banks charge a fee for reissuing a new one."
+      ],
+     
+          "bill_services_header": "Bill Payment Services",
+          "bill_eligibility_title": "Eligibility & Process for Bill Payments",
+          "bill_eligibility_steps": [
+            "Customers must have a savings or current account with the bank.",
+            "Registration may be required for online bill payment via net banking or mobile banking apps.",
+            "Customers can link billers to their bank account for easy recurring payments.",
+            "Payments can be made instantly or scheduled in advance."
+          ],
+          "bill_charges_title": "Charges & Fees",
+          "bill_charges_steps": [
+            "Free for Many Services: Some banks provide free bill payments for certain categories.",
+            "Transaction Fees: Some payments (like credit card bills from another bank) may have small charges.",
+            "Late Payment Penalty: If payments are not made on time, service providers may impose penalties."
+          ],
+          "bill_types_title": "Types of Bill Payment Services",
+          "bill_types_steps": [
+            "Net Banking & Mobile Banking Payments: Customers can log in to their bank’s app/website to pay bills.",
+            "Bank Branch Payments: Some banks allow cash or cheque payments at the branch.",
+            "Auto-Debit Services: Customers can set up standing instructions for automatic deductions.",
+            "BBPS (Bharat Bill Payment System): A centralized system for bill payments via multiple channels."
+          ],
+          
+            "digital_services_header": "Digital Banking Services",
+            "digital_eligibility_title": "Eligibility & Process",
+            "digital_eligibility_steps": [
+              "Customers must have a savings or current account with the bank.",
+              "Register for net banking or mobile banking services.",
+              "Secure login using user ID, password, and OTP authentication.",
+              "Some services require linking the mobile number to the bank account."
+            ],
+            "digital_charges_title": "Charges & Fees",
+            "digital_charges_steps": [
+              "Free for Basic Services: Balance inquiry, fund transfers, and online shopping are usually free.",
+              "Transaction Charges: Some fund transfers (RTGS, NEFT) may have small charges.",
+              "Cardless Cash Withdrawal Fee: Certain banks charge a fee for cash withdrawal via mobile banking.",
+              "Premium Services: Advanced digital services like priority banking apps may have subscription fees."
+            ],
+            "digital_types_title": "Types of Digital Banking Services",
+            "digital_types_steps": [
+              "Internet Banking: Access full banking services through a web browser.",
+              "Mobile Banking Apps: Perform transactions and manage accounts via a smartphone app.",
+              "UPI (Unified Payments Interface): Instant fund transfer using mobile numbers or UPI IDs.",
+              "E-Wallets: Digital wallets for online payments, shopping, and P2P transfers.",
+              "Chatbots & AI Banking: Virtual assistants to help with banking queries.",
+              "USSD Banking: Offline mobile banking for basic transactions via USSD codes (*99# for UPI).",
+              "QR Code Payments: Scan and pay using mobile banking or UPI apps."
+            ],
+            
+            
+            
+              "checkbook_header": "Checkbook Services",
+              "eligibility_process_header": "Eligibility & Process to Avail Checkbook Services",
+              "eligibility_point1": "Customers must have a savings or current account.",
+              "eligibility_point2": "Submit a request through any of the following methods:",
+              "branch_visit": "Branch Visit: Fill out a checkbook request form.",
+              "net_mobile_banking": "Net/Mobile Banking: Order online via the bank’s app or website.",
+              "atm_request": "ATM: Some banks allow checkbook requests through ATMs.",
+              "sms_customer_care": "SMS or Customer Care: Request via registered mobile number or phone banking.",
+              "checkbook_delivery": "The checkbook is delivered to the registered address within a few days.",
+              "eligibility_process_text": "To get a checkbook, customers must have a valid account and can request it through branch visits, mobile banking, ATMs, or customer care services.",
+              "charges_fees_header": "Charges & Fees",
+              "free_checkbooks": "Most banks offer a limited number of free checkbooks per year.",
+              "additional_checkbook_charges": "After free limits, banks charge a fee per checkbook.",
+              "stop_payment_charges": "A small fee is charged for stopping payment on a lost/stolen check.",
+              "check_bounce_penalty": "If a check is dishonored due to insufficient funds, banks impose a penalty.",
+              "charges_fees_text": "Checkbook charges depend on the bank, with free limits and additional fees beyond them.",
+              "types_of_checkbooks_header": "Types of Checkbook Services",
+              "personal_checkbooks": "Personal Checkbooks: For individual account holders.",
+              "business_checkbooks": "Business Checkbooks: For companies and firms.",
+              "multi_city_checks": "Multi-City Checks: Can be encashed at any branch of the bank.",
+              "cts_2010_compliant_checks": "CTS-2010 Compliant Checks: Modern, high-security checks as per RBI/NPCI guidelines.",
+              "types_of_checkbooks_text": "Banks provide personal, business, and multi-city checkbooks based on customer needs.",
+              
+        
+            
+            
+              "insurance_services_header": "Insurance Services",
+              "insurance_eligibility_title": "Eligibility & Process to Avail Insurance Services",
+              "insurance_eligibility_steps": [
+                "Customers must have a savings or current account with the bank (optional in some cases).",
+                "Choose an insurance policy based on requirements (life, health, motor, etc.).",
+                "Submit KYC documents (ID proof, address proof, and income proof for some policies).",
+                "Pay the premium online or through auto-debit from the bank account.",
+                "Policy documents are issued digitally or in physical form."
+              ],
+              "insurance_charges_title": "Charges & Fees",
+              "insurance_charges_steps": [
+                "Premium Amount: Varies based on the type of insurance and coverage.",
+                "Processing Fees: Some banks charge a small fee for policy processing.",
+                "Late Payment Penalty: If premiums are not paid on time, penalties may be applicable.",
+                "Claim Settlement Charges: Some claims may involve processing charges."
+              ],
+              "insurance_types_title": "Types of Insurance Offered by Bank",
+              "insurance_types_steps": [
+                "Life Insurance: Financial protection for the policyholder’s family in case of death.",
+                "Health Insurance: Covers medical expenses, hospitalization costs, and critical illnesses.",
+                "Motor Insurance: Covers damages to vehicles and third-party liabilities.",
+                "Travel Insurance: Covers medical emergencies, trip cancellations, and lost baggage while traveling.",
+                "Home Insurance: Protects homes against natural disasters, theft, and fire damage.",
+                "Personal Accident Insurance: Offers financial support in case of accidental death or disability.",
+                "Loan Insurance: Covers outstanding loan amounts in case of the borrower’s death or disability."
+              ],
+                        
+              
+                "tax_services_header": "Tax Services",
+                "tax_eligibility_title": "Eligibility & Process to Use Tax Services",
+                "tax_eligibility_steps": [
+                  "Must have a savings or current account with the bank.",
+                  "Register for net banking or mobile banking for online tax payments.",
+                  "Select the relevant tax category and provide details such as PAN, TAN, or GSTIN.",
+                  "Complete payment using debit card, net banking, or other available modes."
+                ],
+                "tax_charges_title": "Charges & Fees",
+                "tax_charges_steps": [
+                  "Basic Tax Payments: Usually free for account holders.",
+                  "ITR Filing Services: Some banks charge fees for assisted tax filing.",
+                  "Penalty Charges: Late tax payments may attract penalties and interest as per government rules."
+                ],
+                "tax_types_title": "Types of Taxes That Can Be Paid via Banks",
+                "tax_types_steps": [
+                  "Income Tax: Payable by individuals and businesses on earnings.",
+                  "Goods & Services Tax (GST): Indirect tax on goods and services.",
+                  "TDS (Tax Deducted at Source): Deducted by employers or financial institutions on salaries and interest income.",
+                  "Property Tax: Paid to local municipal authorities.",
+                  "Professional Tax: Applicable to professionals and salaried employees.",
+                  "Customs & Excise Duty: Taxes on imports, exports, and manufacturing of goods."
+                ],
+               
+            
+          
+         
+            
+  
+
+  "vehicle_loan_header": "Vehicle Loan Services",
+  "documents_required": "Documents Required",
+    "close": "Close",
+  "vehicle_loan_access_header": "How to Access Vehicle Loan Services",
+  "vehicle_loan_access_steps": [
+    "Visit the nearest branch or use online banking.",
+    "Log in with your credentials.",
+    "Select the 'Vehicle Loan' option from the services menu."
+  ],
+  "vehicle_loan_procedure_header": "Vehicle Loan Application Procedure",
+  "vehicle_loan_procedure_steps": [
+    "Fill out the vehicle loan application form.",
+    "Submit the required documents.",
+    "Wait for the approval process and verification.",
+    "Receive loan approval and disbursement."
+  ],
+  "vehicle_loan_documents_header": "Required Documents for Vehicle Loan",
+  "vehicle_loan_documents": [
+    "Identity proof (Aadhaar Card, PAN Card, Passport).",
+    "Address proof (Utility bills, Rental agreement, Aadhar Card).",
+    "Income proof (Salary slips, Bank statements, IT returns).",
+    "Vehicle quotation or invoice from the dealer."
+  ],
+  
+  "gold_loan_header": "Gold Loan",
+  "gold_loan_access_header": "How to Access",
+  "gold_loan_access_steps": [
+    "Gold loans can be accessed by visiting any branch offering this service.",
+    "Some branches offer doorstep gold loan services.",
+    "Initial applications can be submitted online for faster processing."
+  ],
+  "gold_loan_procedure_header": "Procedure",
+  "gold_loan_procedure_steps": [
+    "The applicant needs to bring their gold ornaments to the branch.",
+    "The gold is evaluated for purity and weight, and based on its value, the loan amount is sanctioned.",
+    "The process is quick, often taking less than an hour.",
+    "After verification, the gold is securely stored by the bank until the loan is repaid."
+  ],
+  "gold_loan_documents_header": "Required Documents",
+  "gold_loan_documents": [
+    "Identity Proof (Aadhaar, PAN, Passport)",
+    "Address Proof (Utility Bill, Driving License)",
+    "Recent Passport-size Photographs",
+    "No Income Proof Required as the Loan is Secured by Gold"
+  ],
+
+  "personal_loan_header": "Personal Loan",
+  "personal_loan_access_header": "How to Access",
+  "personal_loan_access_steps": "Personal loans can be accessed through the website, mobile app, or by visiting a branch. Users can also contact customer service or loan officers for assistance.",
+  "personal_loan_procedure_header": "Procedure",
+  "personal_loan_procedure_steps": "Applicants need to fill out the loan application form with personal and employment details. After submission, the bank verifies credit score, employment status, and income. If eligible, the loan is approved and disbursed within 24-48 hours.",
+  "personal_loan_documents_header": "Required Documents",
+  "personal_loan_documents": [
+    "Identity proof (PAN Card, Aadhaar, Passport)",
+    "Address proof (Electricity bill, Rental agreement)",
+    "Proof of income (Latest salary slips, bank statements)",
+    "Employment proof (Company ID card, employment certificate)",
+    "Passport-size photographs"
+  ],
+
+  "business_loan_header": "Business Loan",
+  "business_loan_access_header": "How to Access",
+  "business_loan_access_steps": "Businesses can apply for a loan online through the business banking portal, via relationship managers, or by visiting the nearest branch.",
+  "business_loan_procedure_header": "Procedure",
+  "business_loan_procedure_steps": "Applicants must complete the business loan application form and provide business-related documents. The bank evaluates the business plan, cash flow, credit history, and profitability. After an internal assessment, the loan is sanctioned, and the funds are credited to the business account.",
+  "business_loan_documents_header": "Required Documents",
+  "business_loan_documents": [
+    "Business registration certificate",
+    "Identity and address proof of business owners",
+    "Bank statements (Last 12 months)",
+    "Income tax returns (Last 2-3 years)",
+    "Financial statements (Profit & loss statement, balance sheet)",
+    "Business plan with projections",
+    "GST registration (if applicable)"
+  ],
+
+  "edu_loan_header": "Educational Loan",
+  "edu_loan_access_header": "How to Access",
+  "edu_loan_access_steps": "Students can apply for an educational loan online through the education loan portal, visit the nearest branch, or apply via partner institutions.",
+  "edu_loan_procedure_header": "Procedure",
+  "edu_loan_procedure_steps": "Applicants need to fill out the educational loan form and submit admission-related documents. The bank evaluates the applicant’s academic record, the credibility of the institution, and the course details. Co-applicants (parents/guardians) may be required for loan security. Once approved, the loan is disbursed directly to the educational institution in installments as per the fee schedule.",
+  "edu_loan_documents_header": "Required Documents",
+  "edu_loan_documents": [
+    "Admission letter from the institution",
+    "Identity and address proof of the student and co-applicant",
+    "Academic records (Mark sheets, certificates)",
+    "Income proof of co-applicant (Salary slips, IT returns)",
+    "Bank statements (Last 6 months)",
+    "Passport-size photographs"
+  ],
+  
+  
+      "home_loan_header": "Home Loan",
+      "home_loan_access_header": "How to Access",
+      "home_loan_access_steps": [
+        "Visit the nearest bank branch.",
+        "Apply through the official website.",
+        "Use the mobile banking application.",
+        "Contact a loan officer for assistance."
+      ],
+      "home_loan_procedure_header": "Procedure",
+      "home_loan_procedure_steps": [
+        "Fill out an online or offline application form.",
+        "Provide personal, income, and property details.",
+        "Bank conducts initial verification and property evaluation.",
+        "Bank reviews credit history and financial status.",
+        "Receive a sanction letter if eligible.",
+        "Sign the loan agreement.",
+        "Loan amount is disbursed to the seller or builder."
+      ],
+      "home_loan_documents_header": "Required Documents",
+      "home_loan_documents": [
+        "Identity Proof (Aadhar, PAN Card)",
+        "Address Proof (Utility Bill, Passport)",
+        "Income Proof (Salary Slip, ITR)",
+        "Bank Statements (Last 6 Months)",
+        "Property Documents"
+      ],
+     
+    
+
+
+  "locker_services_header": "Locker Services",
+  "eligibility_process": "Eligibility and Process for Obtaining a Locker:",
+  "steps_eligibility": [
+    "A savings or current account with the bank is required.",
+    "Fill out the locker rental agreement and provide the necessary KYC documents.",
+    "In some cases, a refundable security deposit may be required.",
+    "Lockers are allocated based on availability, with priority given to existing customers."
+  ],
+  "charges_fees": "Charges and Fees:",
+  "steps_charges": [
+    "Annual rental fees depend on the size of the locker and the bank's location (urban or rural branch).",
+    "A security deposit may be required.",
+    "Penalties may be imposed for late payments or prolonged non-usage of the locker."
+  ],
+  "terms_conditions": "Terms and Conditions:",
+  "steps_terms": [
+    "If rent is not paid for a long period, the bank has the right to open the locker.",
+    "Customers should keep the locker clean and must not store prohibited items.",
+    "Access is granted only to authorized persons (owner, nominee, or joint holder)."
+  ],
+"locateUs": {
+    "title": "Locate Us",
+    "hotline": "For urgent inquiries, call our 24/7 hotline",
+    "branchLocations": "Branch Locations:",
+    "emergencyContacts": "Emergency Contacts:",
+    "followUs": "Follow Us:",
+    "mapLink": "Click to View on Map",
+    "facebook": "Facebook",
+    "twitter": "Twitter",
+    "instagram": "Instagram"},
+  "locate_us_header": "Locate Us",
+  "branch_locations": "Branch Locations:",
+  "emergency_contacts": "Emergency Contacts:",
+  "hotline_info": "For urgent inquiries, call our 24/7 hotline: +1 234 567 890",
+  "follow_us": "Follow Us:",
+  "social_links": {
+    "facebook": "Facebook",
+    "twitter": "Twitter",
+    "instagram": "Instagram"
+  },
+  "branches": [
+    { "name": "Global Bank - Branch 1", "address": "Andheri-Kurla Road, Andheri East, Mumbai" },
+    { "name": "Global Bank - Branch 2", "address": "Baner Road, Baner, Pune" },
+    { "name": "Global Bank - Branch 3", "address": "Linking Road, Bandra West, Mumbai" }
+  ]
+  ,
+    "updates_header": "Latest Bank Updates & Announcements",
+    "updates_section_title": "Bank Updates",
+    "update_1_title": "Introduction of Instant Fund Transfers (UPI & IMPS) 🚀",
+    "update_1_details": [
+      "Global Bank now offers instant money transfers via Unified Payments Interface (UPI) and Immediate Payment Service (IMPS).",
+      "Transfer funds 24/7, instantly, even on holidays.",
+      "No extra charges for transactions up to ₹1 lakh.",
+      "Accessible via Global Bank Mobile App, Internet Banking, and ATMs."
+    ],
+    "update_1_date": "📌 Update Effective From: March 10, 2025",
+  
+    "update_2_title": "Revised Interest Rates on Fixed Deposits 📈",
+    "update_2_details": [
+      "Global Bank has revised its Fixed Deposit (FD) interest rates.",
+      "3 Months FD: 4.5%",
+      "6 Months FD: 5.2%",
+      "1-Year FD: 6.5%",
+      "5-Year FD: 7.2% (Best Rate!)"
+    ],
+    "update_2_date": "📌 Update Effective From: April 1, 2025",
+  
+    "update_3_title": "New Loan Offers – Lower Interest Rates! 🏡🚗",
+    "update_3_details": [
+      "Home Loans: Interest rates reduced to 8.25% per annum.",
+      "Car Loans: Special 7.5% interest rate for electric vehicles.",
+      "Personal Loans: No processing fee for applications before April 30, 2025.",
+      "Apply via Global Bank’s website, mobile app, or visit any branch."
+    ],
+    "update_3_date": "📌 Update Effective From: March 20, 2025",
+  
+    "updates_announcement_title": "Bank Announcements",
+    "announcement_1_title": "Upcoming Scheduled Maintenance 🛠",
+    "announcement_1_details": [
+      "Internet Banking & Mobile App Services will be unavailable for maintenance on:",
+      "📅 March 18, 2025",
+      "⏰ From 2:00 AM to 5:00 AM (IST)",
+      "ATM and Card Transactions will continue to work without interruptions."
+    ],
+    "announcement_1_date": "📌 Announcement Date: March 12, 2025",
+  
+    "announcement_2_title": "Launch of New Global Bank Branches 📍",
+    "announcement_2_details": [
+      "Three new branches opening soon:",
+      "Mumbai – Bandra West",
+      "Bangalore – Whitefield",
+      "Chennai – T Nagar",
+      "These branches will offer personalized banking services, digital banking assistance, and priority customer service desks."
+    ],
+    "announcement_2_date": "📌 Opening Date: April 5, 2025",
+  
+    "announcement_3_title": "Beware of Fraudulent Calls & Emails ⚠",
+    "announcement_3_details": [
+      "Global Bank has received reports of fraudsters impersonating bank officials.",
+      "Reminder: We NEVER ask for OTPs, passwords, or PINs over phone, SMS, or email.",
+      "If you receive suspicious calls, report them at 1800-123-4567 or email fraudreport@globalbank.com."
+    ],
+    "announcement_3_date": "📌 Announcement Date: March 10, 2025",
+    
+    
+    "rules": {
+      
+      "readAloud": "Read Aloud",
+      "stop": "Stop"
+  ,
+        "title": "Bank Rules & Regulations",
+        "sections": [
+          {
+            "title": "1. Account Opening & Maintenance 🏦",
+            "text": "• Eligibility: Individuals must meet the bank's age and identity verification requirements.\n• KYC (Know Your Customer): Customers must submit valid ID proof, address proof, and photographs as per RBI guidelines.\n• Account Updates: Any change in personal details must be reported to the bank immediately.\n📌 Non-maintenance of minimum balance may result in penalty charges."
+          },
+          {
+            "title": "2. Digital & Online Banking 📲",
+            "text": "• Secure Login: Customers must use strong passwords, OTP verification, and secure devices.\n• Unauthorized Transactions: Must be reported within 24 hours for resolution.\n• Phishing & Cybersecurity: The bank never asks for OTPs, passwords, or PINs via calls, SMS, or emails.\n📌 Customers must update passwords regularly and enable two-factor authentication."
+          },
+          {
+            "title": "3. Service Charges & Fees 💲",
+            "text": "• Account Maintenance Charges: Certain accounts may have annual maintenance fees.\n• Transaction Fees: Some transactions include additional charges.\n• Check Bounce Charges: A penalty is levied for insufficient funds."
+          },
+          {
+            "title": "4. Customer Rights & Responsibilities 👤",
+            "text": "• Right to Information: Customers have the right to receive clear information.\n• Privacy & Data Protection: Customer data is protected under banking laws.\n📌 Customers must keep banking credentials confidential."
+          },
+          {
+            "title": "5. Banking Hours & Holiday Policies 🏦",
+            "text": "• Working Hours: Monday to Friday, 9:30 AM – 4:30 PM; Saturday, 9:30 AM – 1:00 PM.\n• Public Holidays: The bank remains closed on national and state-specific public holidays.\n• 24/7 Banking Services: Customers can access ATMs and online banking anytime."
+          }
+        ]
+      }
+    
+  
+  }  
+    
+    
+  
+  
+  
+

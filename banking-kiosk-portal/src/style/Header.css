@@ -1,27 +1,24 @@
+/* General Styles */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   overflow: hidden;
 }
 
-.dashboard-logo{
-display: flex;
-align-items: center;
-/* gap: 10px; */
-justify-content: space-between;
+.dashboard-logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-/* Main Navigation Bar */
 
 /* Header */
 .header {
-  background-size: 200% 200%; /* Add this */
-  background: linear-gradient(90deg, #71c271,#5f8360 );
-  /* animation: gradientAnimation 8s infinite ; */
+  background-size: 200% 200%;
+  background: linear-gradient(90deg, #71c271, #5f8360);
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  /* background-color: #4aab4e; */
   color: #050505;
   padding: 8px 20px;
   height: 50px;
@@ -30,15 +27,6 @@ justify-content: space-between;
   left: 0;
   z-index: 10;
 }
-/* 
-
-@keyframes gradientAnimation{
-  0% { background: linear-gradient(45deg, #5f8360, #71c271); }
-25% { background: linear-gradient(45deg, #71c271, #5f8360); }
-50% { background: linear-gradient(45deg,#5f8360, #71c271); }
-75% { background: linear-gradient(45deg, #71c271, #5f8360); }
-100% { background: linear-gradient(45deg, #5f8360, #71c271); }
-} */
 
 .bank-logo {
   width: 40px;
@@ -51,34 +39,27 @@ justify-content: space-between;
   margin: 0;
 }
 
-.icons{
+/* Icons */
+.icons {
   position: relative;
-    display: flex;
-    gap: 40px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  gap: 40px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  justify-content: space-between;
 }
 
+/* Title Bar */
 .title-bar {
   background: linear-gradient(to top, #e3ecb2, #76c482);
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
-  /* background-color: #9ab594; */
   padding: 25px 20px;
   margin: 4.2% 0 0 0;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   height: 20px;
-  /* border-radius: 8px; */
 }
-
-/* Logo */
-/* .title-bar img {
-  width: 90px;
-  /* height: auto; 
-  margin-right: 20px;
-} */
 
 /* Navigation Items */
 .nav-links {
@@ -86,58 +67,123 @@ justify-content: space-between;
   gap: 40px;
 }
 
-/* Individual Link Styling */
 .nav-links p {
   text-decoration: none;
   color: #3a3939;
   font-size: 18px;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
-  padding: 10px 20px;  /* Added padding for better spacing */
+  padding: 10px 20px;
   border-radius: 5px;
-  background-image: radial-gradient(circle,#53db6a ,#71c271);
-  /* background-color: #96de87;  */
-  /* background-color: transparent;  */
+  background-image: radial-gradient(circle, #53db6a, #71c271);
 }
 
-/* Prevent Overlapping */
-.nav-links h2 {
-  margin: 0;
-  white-space: nowrap;
+.nav-links a {
+  text-decoration: none;
+  font-size: x-large;
 }
 
-.nav-links a{
-text-decoration: none;
-text-decoration: solid;
-font-size: x-large;
-}
-/* Hover Effect */
 .nav-links a:hover {
   color: #2F6D6A;
   transform: scale(1.1);
 }
+/*chat*/
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
 
-/* Search Box Alignment */
-/* .search-box {
+.chat-btn {
+  background-color: #00a651;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.chat-btn:hover {
+  background-color: #006400;
+}
+/* Language Selector */
+.language-container {
   display: flex;
   align-items: center;
   gap: 10px;
-} */
+  min-width: max-content; /* Prevents it from shrinking */
+}
+
+.language-label {
+  background-color: #00a651;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: left;
+  white-space: nowrap;
+}
+.language-selector {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 2px solid #00a651;
+  background-color: white;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  width: auto; /* Ensure it takes enough space */
+  min-width: 80px; /* Adjust as needed */
+  margin-right: 40px; /* Push it slightly */
+
+}
+
+
+.language-selector option {
+  background-color: white;
+  color: black;
+  font-size: 14px;
+  padding: 1px;
+}
+
+/* Chat Button */
+.chat-section {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.chat-container {
+  display: inline-block;
+  background: linear-gradient(to right, #32CD32, #2E8B57);
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.chat-container:hover {
+  background: linear-gradient(to right, #2E8B57, #228B22);
+}
 
 /* Responsive Fix */
 @media (max-width: 768px) {
   .title-bar {
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
   }
 
   .nav-links {
-      flex-direction: column;
-      gap: 20px;
-      text-align: center;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
   }
 }
+
+/* Shiny Text Effect */
 .shiny-text {
   font-size: 2em;
   font-weight: bold;
